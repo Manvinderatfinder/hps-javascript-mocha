@@ -29,7 +29,7 @@ exports.Actionwords = {
   iAmInUserprofilesigninPage: function () {
 
   },
-  iEnterInvalidCredentialsemailAndPassword: function () {
+  iEnterInvalidCredentialsemailAndPassword: function (__free_text) {
 
   },
   errorMessageShouldDisplay: function (__free_text) {
@@ -42,6 +42,48 @@ exports.Actionwords = {
 
   },
   iAmInUserprofilesignupPage: function () {
+
+  },
+  iOnAPageHttpswwwfindercomau: function () {
+
+  },
+  iClickOnRegisterlogin: function () {
+
+  },
+  userLoginModalShouldAppear: function () {
+
+  },
+  iAmInUserLoginModal: function () {
+
+  },
+  thisEmailDoesNotHaveAnAccount: function () {
+
+  },
+  iEnterMyExistingCredentialsInEmailAddressAndPasswordFieldForSignup: function () {
+
+  },
+  iClickOnLogoutButtonInGlobalNavbar: function () {
+
+  },
+  iShouldBeLoggedOutFromUserSytemAndShouldRedirectToUserprofilesignup: function () {
+
+  },
+  iAmOnUserprofilesignin: function () {
+
+  },
+  iClickOnForgetPasswordButton: function () {
+
+  },
+  forgetPasswordEmailSectionShouldDisplay: function () {
+
+  },
+  iAmOnResetMyPasswordPage: function () {
+
+  },
+  iClickOnResetMyPasswordButtonWithoutEnteringEmail: function () {
+
+  },
+  errorMessageShouldLoad: function (__free_text) {
 
   }
 };

@@ -41,7 +41,8 @@
   body_hash: d41d8cd98f00b204e9800998ecf8427e
 - name: I enter invalid credentials(email and password)
   uid: 5dd496c3-976c-4c15-9afe-facf7bfaa28f
-  parameters: []
+  parameters:
+  - name: __free_text
   body_hash: d41d8cd98f00b204e9800998ecf8427e
 - name: error message should display
   uid: 32c1f505-9fc8-4fb0-90a9-0c38f5828827
@@ -59,4 +60,61 @@
 - name: I am in /user-profile/sign-up page
   uid: be904822-a82d-4b1d-8abe-0b540f2453a4
   parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I on a page https://www.finder.com.au/
+  uid: 3f3b2982-c540-4580-9924-f5f4482b57a3
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I click on Register/login
+  uid: e3a9dc91-dd22-4358-a57f-47ef38874fb2
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: user login modal should appear
+  uid: 06a54d9e-bdf8-4ee9-aa1f-5064bf6db267
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I am in user login modal
+  uid: 6de77765-6fe3-45d0-a356-61c4c6fc01b4
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: This email does not have an account.
+  uid: ea92d8b0-cea7-4341-89e4-d4c102548c6c
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I enter my existing credentials in email address and password field for signup
+  uid: 68e29f39-c516-4b21-827d-f40b404beeae
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I click on logout button in global navbar
+  uid: 58d04f8f-dc84-4a3f-90f8-339bbc3bb50f
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I should be logged out from user sytem and should redirect to /user-profile/sign-up
+  uid: edbf7bf4-d144-40ec-be17-a8733f3ad84e
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I am on /user-profile/sign-in
+  uid: 1f4ebbab-b9a4-4020-bbc9-03d5384d98b0
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I click on Forget password button
+  uid: 88e8fb06-4c47-4bd3-a0cb-b3fe1410a334
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: forget password email section should display
+  uid: 01e9870f-6386-4c1c-9b4b-b3657ba0dee4
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I am on reset my password page
+  uid: ecb3ccca-78bc-4342-935c-8c7af22d2952
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I click on Reset my password button without entering email
+  uid: afa2ae8a-d18c-4157-ae38-7b60d15482f8
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: error message should load
+  uid: 311dfea0-d7d5-4e07-87f8-48ab58536ebb
+  parameters:
+  - name: __free_text
   body_hash: d41d8cd98f00b204e9800998ecf8427e
