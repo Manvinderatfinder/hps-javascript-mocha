@@ -1,86 +1,62 @@
 ---
-- name: I start the coffee machine using language "lang"
-  uid: 1f3c7a81-f243-4407-965c-9cb2dbd72096
-  parameters:
-  - name: lang
-  body_hash: 0dca366e0eefbfe2afdda10ba2bf6dc6
-- name: I shutdown the coffee machine
-  uid: 1cb4a5f7-0a13-4bdf-94a3-3756b8c31135
-  parameters: []
-  body_hash: 484adb5b2a4664a4d468c66e2a8178b8
-- name: message "message" should be displayed
-  uid: 68f96081-92ce-4b95-84f6-09701396e12b
-  parameters:
-  - name: message
-  body_hash: 85dbb82cd108b186b62beea6630186da
-- name: coffee should be served
-  uid: 4badb0e9-3ba4-47ef-bf5d-0bc76955312e
-  parameters: []
-  body_hash: 7c9252da6fce7d9d92ec33f9047bb332
-- name: coffee should not be served
-  uid: e20e1534-5d84-476a-9195-38fd5399acff
-  parameters: []
-  body_hash: 7108a9c6cf93158258425829460bae78
-- name: I take a coffee
-  uid: efdcdaaa-988b-4a7c-9b80-2a11f846bc8a
-  parameters: []
-  body_hash: d3b731018e0c6e030732455fa55578ab
-- name: I empty the coffee grounds
-  uid: d33cc3c5-ea8a-4509-abe2-e504e8df17e4
-  parameters: []
-  body_hash: 50085c7e1da853f7a1f76dbaea00a33d
-- name: I fill the beans tank
-  uid: 7f328e52-ed37-4d3d-86ea-4cbc1eb8dacd
-  parameters: []
-  body_hash: 4919bd48d489fc94342e8ca494169072
-- name: I fill the water tank
-  uid: '0583258a-5480-4705-afc9-67475a3ab354'
-  parameters: []
-  body_hash: 6c8455b47f7300c09bd7ff55ba77851e
-- name: I take "coffee_number" coffees
-  uid: fccf9b65-653c-43eb-8de4-406d50c5657d
-  parameters:
-  - name: coffee_number
-  body_hash: d41d8cd98f00b204e9800998ecf8427e
-- name: the coffee machine is started
-  uid: 0e76d7f5-f591-425c-9c7c-2bae5f43259e
-  parameters: []
-  body_hash: 94bc62dc775c5d18b863b3acc45e58c1
-- name: I handle everything except the water tank
-  uid: dbc977b8-e42f-4b6a-8e84-e709a2d994ef
-  parameters: []
-  body_hash: 190d3ba75e025e591ff7f99993549993
-- name: I handle water tank
-  uid: 86393786-a87c-44c4-8ad9-6921f2683dca
+- name: User login
+  uid: 611255de-f32d-4a05-83ff-4ab706b99369
   parameters: []
   body_hash: d41d8cd98f00b204e9800998ecf8427e
-- name: I handle beans
-  uid: 8558081a-0a14-475a-9ad5-942ad4b674d0
+- name: I am in  /user-profile/sign-in page
+  uid: 917513ee-852b-4786-bbda-22dd5168d959
   parameters: []
   body_hash: d41d8cd98f00b204e9800998ecf8427e
-- name: I handle coffee grounds
-  uid: 81495eff-e9a1-4e16-b015-a59dd290f469
+- name: Then Sign In tab should be selected by default on page load
+  uid: c9b67dd7-74cf-41bd-a7e9-79e7a98848f7
   parameters: []
   body_hash: d41d8cd98f00b204e9800998ecf8427e
-- name: I handle everything except the beans
-  uid: d8f467fb-a091-43f2-820e-b672a6a856a4
+- name: Sign In tab should be selected by default on page load
+  uid: 3c8e9a0f-acb2-4923-97ba-4b5829e32aae
   parameters: []
-  body_hash: 7362fd1bbebadfce305cbc940457482a
-- name: I handle everything except the grounds
-  uid: 9bfd7e3c-df4a-4caf-a46a-c362d07559e6
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I click on SIGN IN button
+  uid: 8d5aa88c-86a4-475a-b902-60dd617dcfbf
   parameters: []
-  body_hash: 5a1a5de8852fb0d8371e89927f48ae3c
-- name: 'displayed message is:'
-  uid: d264673f-99f7-4a93-a602-7ebf43756e7c
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I should be sign in to user system
+  uid: ec408347-fa10-45d0-996c-f113c0c058ac
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I should redirect to my profile section
+  uid: 52a19afd-9893-478f-a8a4-87c798ef057a
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: url in the browser should be /user-profile/questions
+  uid: 1f4cef36-9f52-468b-9cef-87115bc455a4
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I enter my existing credentials to sign in
+  uid: 2e5f3dc4-a39d-45c2-ad2f-1c8194e92697
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I am in /user-profile/sign-in page
+  uid: 9cdf6d36-e4c8-4079-988a-5689f7f0e461
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I enter invalid credentials(email and password)
+  uid: 5dd496c3-976c-4c15-9afe-facf7bfaa28f
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: error message should display
+  uid: 32c1f505-9fc8-4fb0-90a9-0c38f5828827
   parameters:
   - name: __free_text
-  body_hash: bba1f64e3a77edbb2889e4b336fd6787
-- name: I switch to settings mode
-  uid: 9511df7f-5b6b-447a-b318-ca913adf2a82
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I enter non existing email ID with a password
+  uid: be1cccdb-fce3-44df-aa80-5121f18ab755
   parameters: []
   body_hash: d41d8cd98f00b204e9800998ecf8427e
-- name: 'settings should be:'
-  uid: feb653ff-14e2-46df-8b98-f55e6333f9e1
-  parameters:
-  - name: __datatable
+- name: click on SIGN IN button
+  uid: a59de059-2876-45f3-be4b-52deb469e52b
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I am in /user-profile/sign-up page
+  uid: be904822-a82d-4b1d-8abe-0b540f2453a4
+  parameters: []
   body_hash: d41d8cd98f00b204e9800998ecf8427e
