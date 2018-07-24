@@ -1,89 +1,112 @@
+var assert = require('assert');
+
 exports.Actionwords = {
-  userLogin: function () {
-
+  iStartTheCoffeeMachineUsingLanguageLang: function (lang) {
+    this.sut.start(lang);
   },
-  iAmInUserprofilesigninPage: function () {
 
+  iShutdownTheCoffeeMachine: function () {
+    this.sut.stop();
   },
-  thenSignInTabShouldBeSelectedByDefaultOnPageLoad: function () {
 
+  messageMessageShouldBeDisplayed: function (message) {
+    assert.equal(message || "", this.sut.get('message'));
   },
-  signInTabShouldBeSelectedByDefaultOnPageLoad: function () {
 
+  coffeeShouldBeServed: function () {
+    assert.equal(true, this.sut.get('coffeeServed'));
   },
-  iClickOnSIGNINButton: function () {
 
+  coffeeShouldNotBeServed: function () {
+    assert.equal(false, this.sut.get('coffeeServed'));
   },
-  iShouldBeSignInToUserSystem: function () {
 
+  iTakeACoffee: function () {
+    this.sut.takeCoffee();
   },
-  iShouldRedirectToMyProfileSection: function () {
 
+  iEmptyTheCoffeeGrounds: function () {
+    this.sut.emptyGrounds();
   },
-  urlInTheBrowserShouldBeUserprofilequestions: function () {
 
+  iFillTheBeansTank: function () {
+    this.sut.fillBeans();
   },
-  iEnterMyExistingCredentialsToSignIn: function () {
 
+  iFillTheWaterTank: function () {
+    this.sut.fillTank();
   },
-  iAmInUserprofilesigninPage: function () {
 
+  iTakeCoffeeNumberCoffees: function (coffee_number) {
+    this.handled = this.handled || [];
+
+    while ((coffee_number > 0)) {
+      this.iTakeACoffee();
+      coffee_number = coffee_number - 1;
+
+      if (this.handled.indexOf('water') >= 0) {
+        this.iFillTheWaterTank();
+      }
+
+      if (this.handled.indexOf('beans') >= 0) {
+        this.iFillTheBeansTank();
+      }
+
+      if (this.handled.indexOf('grounds') >= 0) {
+        this.iEmptyTheCoffeeGrounds();
+      }
+    }
   },
-  iEnterInvalidCredentialsemailAndPassword: function (__free_text) {
 
+  theCoffeeMachineIsStarted: function () {
+    this.iStartTheCoffeeMachineUsingLanguageLang();
   },
-  errorMessageShouldDisplay: function (__free_text) {
 
+  iHandleWaterTank: function () {
+    this.handled = this.handled || [];
+    this.handled.push('water');
   },
-  iEnterNonExistingEmailIDWithAPassword: function () {
 
+  iHandleBeans: function () {
+    this.handled = this.handled || [];
+    this.handled.push('beans');
   },
-  clickOnSIGNINButton: function () {
 
+  iHandleCoffeeGrounds: function () {
+    this.handled = this.handled || [];
+    this.handled.push('grounds');
   },
-  iAmInUserprofilesignupPage: function () {
 
+  iHandleEverythingExceptTheWaterTank: function () {
+    this.iHandleCoffeeGrounds();
+    this.iHandleBeans();
   },
-  iOnAPageHttpswwwfindercomau: function () {
 
+  iHandleEverythingExceptTheBeans: function () {
+    this.iHandleWaterTank();
+    this.iHandleCoffeeGrounds();
   },
-  iClickOnRegisterlogin: function () {
 
+  iHandleEverythingExceptTheGrounds: function () {
+    this.iHandleWaterTank();
+    this.iHandleBeans();
   },
-  userLoginModalShouldAppear: function () {
 
+  displayedMessageIs: function (__free_text) {
+    this.messageMessageShouldBeDisplayed(__free_text);
   },
-  iAmInUserLoginModal: function () {
 
+  iSwitchToSettingsMode: function () {
+    this.sut.showSettings();
   },
-  thisEmailDoesNotHaveAnAccount: function () {
 
-  },
-  iEnterMyExistingCredentialsInEmailAddressAndPasswordFieldForSignup: function () {
+  settingsShouldBe: function (__datatable) {
+    var cells, settings = {};
+    __datatable.split("\n").forEach(function(line) {
+      cells = line.split('|');
+      settings[cells[1].trim()] = cells[2].trim();
+    });
 
-  },
-  iClickOnLogoutButtonInGlobalNavbar: function () {
-
-  },
-  iShouldBeLoggedOutFromUserSytemAndShouldRedirectToUserprofilesignup: function () {
-
-  },
-  iAmOnUserprofilesignin: function () {
-
-  },
-  iClickOnForgetPasswordButton: function () {
-
-  },
-  forgetPasswordEmailSectionShouldDisplay: function () {
-
-  },
-  iAmOnResetMyPasswordPage: function () {
-
-  },
-  iClickOnResetMyPasswordButtonWithoutEnteringEmail: function () {
-
-  },
-  errorMessageShouldLoad: function (__free_text) {
-
+    assert.deepEqual(this.sut.getSettings(), settings);
   }
 };

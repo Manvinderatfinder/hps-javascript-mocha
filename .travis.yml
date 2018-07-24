@@ -1,14 +1,15 @@
 language: node_js
+node_js:
+  - "8"
 
 before_install:
   - rvm install 2.2
   - rvm use 2.2
   - gem install hiptest-publisher
-  - hiptest-publisher --config-file mocha.conf --test-run-id 110910 --only=tests
+  - hiptest-publisher -c mocha.conf --token=$SECRET_TOKEN --only=tests --test-run-id=11085
 
 script:
   - mocha test --recursive --reporter mocha-junit-reporter
 
 after_script:
-   - hiptest-publisher --config-file mocha.conf --push=test-results.xml --test-run-id 110910 --push-format junit
- 
+  - hiptest-publisher -c mocha.conf --token=$SECRET_TOKEN --push=test-results.xml --test-run-id=11085
